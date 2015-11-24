@@ -8,15 +8,26 @@
 
 #import "AppDelegate.h"
 
+#define GoogleKEY @"AIzaSyAYCgWIaL2KJAMwoTvIIaq9wNcY5mBfvMs"
+
+
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
-
+@synthesize jvfdrawerview;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    jvfdrawerview = [[JVFloatingDrawer alloc] init];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.rootViewController =(UIViewController *)jvfdrawerview.drawerViewController;
+    [jvfdrawerview configureDrawerViewController];
+    [self.window makeKeyAndVisible];
     // Override point for customization after application launch.
+    [GMSServices provideAPIKey:GoogleKEY];
+    googleservice = [GMSServices sharedServices];
     return YES;
 }
 

@@ -7,7 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
+#import <GoogleMaps/GoogleMaps.h>
+
 
 @interface MainViewController : UIViewController
+{
+    UIBarButtonItem *leftitem;
+    AppDelegate *app;
+}
+
+
+@property (weak, nonatomic) IBOutlet UINavigationItem *navtitle;
+@property (weak, nonatomic) IBOutlet GMSMapView *GMapView;
+
+
 
 @end

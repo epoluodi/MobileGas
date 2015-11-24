@@ -7,11 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JVFloatingDrawer.h"
+#import <GoogleMaps/GoogleMaps.h>
+
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
-
+{
+    GMSServices *googleservice;
+}
 @property (strong, nonatomic) UIWindow *window;
-
+@property (strong,nonatomic) JVFloatingDrawer *jvfdrawerview;
 
 @end
 

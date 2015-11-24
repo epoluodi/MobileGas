@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "MainViewController.h"
+#import "MainNavController.h"
 #import "SettingViewController.h"
 
 @class JVFloatingDrawerViewController;
 @class JVFloatingDrawerSpringAnimator;
-@class MainViewController;
+@class MainNavController;
 @class SettingViewController;
 
 @interface JVFloatingDrawer : NSObject
@@ -30,7 +30,7 @@
 
 @property (nonatomic, strong) SettingViewController *settingview;
 
-@property (nonatomic, strong) MainViewController *mainViewController;
+@property (nonatomic, strong) MainNavController *mainnavview;
 
 - (void)toggleLeftDrawer:(id)sender animated:(BOOL)animated;
 -(void)showView:(UIViewController *)viewcontrol;

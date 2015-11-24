@@ -42,7 +42,7 @@
     if (!_drawerAnimator) {
         _drawerAnimator = [[JVFloatingDrawerSpringAnimator alloc] init];
     }
-    
+ 
     return _drawerAnimator;
 }
 
@@ -73,17 +73,17 @@
     self.drawerViewController.centerViewController = self.getMainview;
     
     self.drawerViewController.animator = self.drawerAnimator;
-    
-    self.drawerViewController.backgroundImage = [UIImage imageNamed:@"settingback"];
+    self.drawerViewController.view.backgroundColor = [UIColor blueColor];
+//    self.drawerViewController.backgroundImage = [UIImage imageNamed:@"settingback"];
 }
 
-- (MainViewControl *)getMainview {
-    if (!_mainViewController) {
-        _mainViewController = [drawersStoryboard instantiateViewControllerWithIdentifier:@"mainview"];
+- (MainNavController *)getMainview {
+    if (!_mainnavview) {
+        _mainnavview = [drawersStoryboard instantiateViewControllerWithIdentifier:@"mainnavview"];
 //        _MainViewController.drawerview=self;
     }
     
-    return _mainViewController;
+    return _mainnavview;
 }
 
 - (void)toggleLeftDrawer:(id)sender animated:(BOOL)animated {
